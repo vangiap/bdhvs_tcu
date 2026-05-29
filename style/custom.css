@@ -1,0 +1,1254 @@
+
+.secondary-navigation {
+    position: inherit !important;
+    top: 0px !important;
+}
+body.has-secondarynavigation #page, body.has-secondarynavigation #page.drawers {
+   margin-top: 0px !important;
+}
+.secondarymoremenu  li[data-key="coursehome"]{
+  display: none !important;
+}
+div#nav-notification-popover-container{
+  display: none !important;
+}
+.popover-region.collapsed[data-region="popover-region-messages"]{
+  display: none !important;
+}
+.loginform.row img#logoimage{
+  width: 100px;
+}
+.login-form-submit.col .login-form-submit.col{
+      height: 46px;
+    font-size: 18px;
+}
+#page-site-index #mooveslideshow .carousel-indicators {
+    background-color: unset !important;
+}
+.d-flex.align-items-stretch.usermenu-container{
+      align-items: center !important;
+}
+nav.navbar.bg-body{
+    background-color: #d50401 !important;
+    box-shadow: none;
+    border-bottom: none !important;
+    padding: 0px 15px;
+    margin: 0px !important;
+}
+.primary-navigation .navigation .nav-link {
+    height: 60px;
+    color: #ffffff !important;
+    border-top: none;
+    font-size: 17px;
+    border-color: unset;
+    background-color: unset;
+    border: none;
+}
+.moremenu .nav-link.active:focus, .moremenu .nav-link.active:hover, .moremenu .nav-link.active, .moremenu .nav-link:hover {
+    background-color: unset;
+    border-bottom-color: unset;
+    color: #FFD700;
+}
+div#usernavigation .input-group label, a#user-menu-toggle{
+  color: #ffffff !important;
+}
+.navbar-expand .navbar-nav li.dropdown.nav-item:hover  .dropdown-menu {
+  display: block;
+}
+.navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+    background: #ca3120 !important;
+    border-radius: 0px;
+    border-color: unset;
+    border: unset;
+}
+.navbar-expand .navbar-nav .dropdown-menu .dropdown-item{
+color: #fff;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.navbar-expand .navbar-nav .dropdown-menu .dropdown-item:hover{
+   background-color: unset;
+    border-bottom-color: unset;
+    color: #FFD700;
+}
+.navbar-expand .navbar-nav .dropdown-menu .dropdown-item[aria-current="true"]{
+  color: #FFD700;
+}
+.navbar-expand .navbar-nav .dropdown-menu .dropdown-item[aria-current="true"]::before{
+  display: none !important;
+}
+.usermenu .login  a{
+  color: #ffffff !important;
+  background: unset;
+  box-shadow: unset;
+}
+#page, #page.drawers {
+    margin-top: 0px !important
+}
+#page-wrapper #page nav.navbar.bg-body.navbar-expand.border-bottom.px-2{
+  display: none !important;
+}
+#page-footer .copyright{
+    background-color: #a1bd98 !important;
+    padding: 15px 0px;
+    font-size: 16px;
+}
+footer .usertour{display: none !important;}
+footer .info-contact{
+  display: flex;
+    align-items: center;
+}
+footer .info-contact h2{
+  margin: 0px;
+    font-size: 28px;
+    margin-left: 12px;
+}
+footer .info-contact img{
+  height: 100px;
+}
+footer .contact h4{
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+footer .contact ul{
+  list-style: none;
+  padding-left: 0px;
+}
+footer .contact ul li{
+  display: block !important;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+footer .contact ul li i.fa {
+    min-width: 20px;
+    text-align: left;
+}
+.footer-bg{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+    #page-login-index .loginform {
+        width: 30%;
+    }
+}
+
+
+/* Custom css cho slider */
+
+#page-site-index #mooveslideshow {
+    /* custom của bạn */
+    background-color: #000;
+    margin-top: 0rem !important; 
+    border-radius: 0px !important;
+    height: 500px;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#page-site-index #mooveslideshow .carousel-inner {
+    border-radius: 0px !important;
+    max-height: 100% !important;
+    height: 100%;
+    width: 100%;
+}
+
+#page-site-index #mooveslideshow .carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+#page-site-index #mooveslideshow .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page-site-index #moove-carousel {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Tin tức section */
+.carousel .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel .col-lg-3,
+.carousel .col-md-6 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* 4 news per row on desktop */
+.carousel .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 10px;
+}
+
+/* 2 news per row on tablet */
+@media (max-width: 991px) {
+    .carousel .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px;
+    }
+}
+
+/* 1 news per row on mobile */
+@media (max-width: 576px) {
+    .carousel .col-lg-3,
+    .carousel .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.carousel .card {
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: all .3s ease;
+    background: #fff;
+}
+
+.carousel .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.carousel .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel .card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    height: 54px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.carousel .card-text {
+    font-size: 15px;
+    line-height: 1.6;
+    height: 72px;
+    overflow: hidden;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.carousel .btn-primary {
+    border-radius: 10px;
+    padding: 8px 18px;
+}
+
+
+/* Custom css khóa học */
+
+/* ===== COURSE GRID ===== */
+
+.frontpage-category-combo {
+    gap: 24px 0;
+}
+
+/* ===== CARD ===== */
+
+.dashboard-card {
+    border: none !important;
+    border-radius: 18px !important;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.06);
+    transition: all .35s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0,0,0,.14);
+}
+
+/* ===== IMAGE ===== */
+
+.dashboard-card-img {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+    transition: transform .5s ease;
+}
+
+.dashboard-card:hover .dashboard-card-img {
+    transform: scale(1.04);
+}
+
+/* ===== OVERLAY ===== */
+
+.dashboard-card-img::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.28),
+        transparent 55%
+    );
+}
+
+/* ===== CATEGORY ===== */
+
+.course-category {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+
+    background: rgba(125, 164, 115, .92);
+
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    padding: 6px 12px;
+    border-radius: 30px;
+
+    backdrop-filter: blur(6px);
+}
+
+/* ===== BODY ===== */
+
+.course-info-container {
+    padding: 5px !important;
+}
+
+/* ===== TITLE ===== */
+
+.coursename {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    font-size: 19px;
+    font-weight: 700 !important;
+    line-height: 1.5;
+
+    color: #2c3e50 !important;
+
+    text-decoration: none !important;
+
+    min-height: 58px;
+    padding: 0 0.5rem;
+
+    transition: color .3s ease;
+}
+
+.dashboard-card:hover .coursename {
+    color: #6f9a67 !important;
+}
+
+/* ===== SUMMARY ===== */
+
+.course-summary {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===== LOCK ICON ===== */
+
+.enrolmenticons {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    z-index: 2;
+}
+
+.enrolmenticon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.92);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+}
+
+.enrolmenticon i {
+    color: #7da473;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    .coursename {
+        font-size: 17px;
+        min-height: auto;
+    }
+
+    .dashboard-card-img {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+/* 4 card / row */
+
+.frontpage-category-combo > .dashboard-card {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+/* tablet */
+
+@media (max-width: 991px) {
+    .frontpage-category-combo > .dashboard-card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 576px) {
+    .frontpage-category-combo > .dashboard-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* ===== COURSE CARDS 4 PER ROW ===== */
+
+/* Block My Overview - 4 cards per row */
+.block_myoverview .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+    width: calc(25% - 2rem) !important;
+    margin: 1rem;
+}
+
+/* Front page category - 4 cards per row */
+.pagelayout-frontpage .dashboard-card,
+.pagelayout-coursecategory .dashboard-card {
+    width: calc(25% - 2rem) !important;
+    max-width: calc(25% - 2rem) !important;
+}
+
+/* My Dashboard - 4 cards per row */
+.pagelayout-mydashboard #block-region-content .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+    width: calc(25% - 2rem) !important;
+    margin: 1rem;
+}
+
+/* Responsive - tablet */
+@media (max-width: 991px) {
+    .block_myoverview .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: calc(50% - 2rem) !important;
+    }
+    
+    .pagelayout-mydashboard #block-region-content .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: calc(50% - 2rem) !important;
+    }
+}
+
+/* Responsive - mobile */
+@media (max-width: 576px) {
+    .block_myoverview .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: calc(100%) !important;
+        margin: 1rem 0;
+    }
+    
+    .pagelayout-mydashboard #block-region-content .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: calc(100%) !important;
+        margin: 1rem 0;
+    }
+}
+
+/* ========== 🆕 CSS CHO SLIDE BOXES - Tách riêng cho dễ quản lý ========== */
+
+/* Carousel caption - Nằm đúng vị trí trong slider - 🔧 Cân đối, không tràn, không scroll */
+#page-site-index #mooveslideshow .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    padding: 15px 10px;
+    border-radius: 0;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 90vh;
+}
+
+/* 🆕 Ẩn scrollbar (Chrome, Safari, Edge) */
+#page-site-index #mooveslideshow .carousel-caption::-webkit-scrollbar {
+    display: none;
+}
+
+/* 🆕 Ẩn scrollbar (Firefox, IE) */
+#page-site-index #mooveslideshow .carousel-caption {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Tiêu đề chính slide - Màu vàng, font lớn, bóng đen */
+.slide-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffeb00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 1px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Phụ đề slide - Màu trắng, font cỡp vừa */
+.slide-subtitle {
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Container chứa các khối boxes - Layout Flexbox - 🔧 Cân đối, không tràn, có logo giữa */
+.slide-boxes-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0.8rem auto;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+    align-items: center;
+}
+
+/* 🆕 Logo/Diamond giữa boxes */
+.slide-boxes-container::after {
+    content: '♦';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #ffeb00;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Từng khối box - Trắng bg, border vàng, shadow, hover effect - 🆕 Thu nhỏ 1 xíu cho logo */
+.slide-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 0.8rem;
+    border: 3px solid #ffeb00;
+    text-align: center;
+    flex: 0 1 calc(30% - 0.8rem);
+    min-width: 160px;
+    max-width: calc(30% - 0.8rem);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Ensure consistent box height and vertical layout so center logo can match height */
+.slide-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px; /* increased total box height on desktop */
+}
+
+/* Hover effect cho box - Nâng lên, shadow tăng */
+.slide-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Container cho hình ảnh box */
+.box-image-wrapper {
+    width: 100%;
+    height: 220px; /* larger container so image can fit without cropping */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    background-color: #f0f0f0;
+    position: relative; /* ensure overlay title positions correctly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hình ảnh bên trong box - Contain so it won't be cropped */
+.box-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Tiêu đề box - Màu xanh (default when not overlay) */
+.box-title {
+    color: #0066cc;
+    font-size: 0.95rem;
+    margin: 0.6rem 0;
+    font-weight: 600;
+    line-height: 1.3;
+    min-height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* When title is inside the image wrapper, style it as an overlay */
+.box-image-wrapper .box-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0.45rem 0.6rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%);
+    color: #ffffff;
+    font-size: 0.95rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+}
+
+/* Ensure wrapper can position overlay */
+.box-image-wrapper {
+    position: relative;
+}
+
+/* Nút bấm "VÀO HỌC NGAY" - Đỏ, pill-shaped, hover effect */
+.btn-slide-action {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 2px solid #ff0000;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    margin-top: 0.6rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Hover effect cho nút bấm - Đảo màu */
+.btn-slide-action:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+}
+/* Center logo between boxes */
+.slide-center-logo-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-center-logo {
+    /* enlarge logo so its height matches box height */
+    max-width: 220px;
+    max-height: 220px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* When exactly two boxes, make boxes slightly smaller to create breathing room and keep logo large */
+.slide-boxes-container.two-boxes .slide-box {
+    flex: 0 1 calc(24% - 1rem);
+    max-width: calc(24% - 1rem);
+    min-width: 140px;
+    min-height: 220px;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 991px) {
+    .slide-boxes-container {
+        gap: 0.6rem;
+        padding: 0 3px;
+    }
+    
+    .slide-box {
+        flex: 0 1 calc(50% - 0.4rem);
+        min-width: 150px;
+        max-width: calc(50% - 0.4rem);
+        min-height: 200px;
+    }
+    
+    .slide-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .slide-subtitle {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .box-image-wrapper {
+        height: 100px;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 576px) {
+    #page-site-index #mooveslideshow .carousel-caption {
+        padding: 10px 8px;
+    }
+    
+    .slide-boxes-container {
+        gap: 0.5rem;
+        margin: 0.5rem auto;
+        padding: 0 5px;
+    }
+    
+    .slide-box {
+        flex: 0 1 100%;
+        min-width: auto;
+        max-width: 100%;
+        padding: 0.6rem;
+        min-height: 180px;
+    }
+    
+    .slide-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .slide-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .box-image-wrapper {
+        height: 100px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .box-title {
+        font-size: 0.85rem;
+        margin: 0.4rem 0;
+        min-height: 2rem;
+    }
+    
+    .btn-slide-action {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        margin-top: 0.4rem;
+    }
+    /* Make logo smaller on mobile to match reduced box height */
+    .slide-center-logo {
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+
+
+#page-site-index.notloggedin #mooveslideshow .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.125);
+    height: 100%;
+}
+
+/* Login page custom theme */
+
+
+body#page-login-index::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.76), rgba(250, 242, 228, 0.86)),
+        url("../pix/banner-header.jpg") center / cover no-repeat;
+    filter: blur(3px);
+    transform: scale(1.02);
+    opacity: 0.5;
+}
+
+#page-login-index #page-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+#page-login-index .login-container {
+    width: 100% !important;
+    max-width: 1040px !important;
+    padding: 24px !important;
+    margin: 0 auto;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#page-login-index .loginform.row {
+    display: block;
+    width: 100% !important;
+    max-width: 960px;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(213, 4, 1, 0.16);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(78, 42, 25, 0.14);
+}
+
+#page-login-index .loginform.row > .left-column,
+#page-login-index .loginform.row > .col {
+    display: grid;
+    grid-template-columns: minmax(260px, 42%) minmax(320px, 1fr);
+    gap: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 0 !important;
+}
+
+#page-login-index .loginform .login-logo {
+    grid-row: 1 / span 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 430px;
+    margin: 0;
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background:
+        linear-gradient(rgb(255 199 96 / 0%), rgb(211 183 183 / 42%)), url("//localhost/moodle/pluginfile.php/1/theme_moove/sliderimage1/1779845759/BG01.jpg") center / cover no-repeat;
+}
+
+#page-login-index .loginform .login-logo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(213, 4, 1, 0.16);
+    backdrop-filter: blur(1.5px);
+}
+
+#page-login-index .loginform .login-logo::after {
+    content: "BÌNH DÂN HỌC VỤ SỐ 2026";
+    position: relative;
+    z-index: 1;
+    display: block;
+    max-width: 280px;
+    margin-top: 22px;
+    color: #fff7ed;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+}
+
+#page-login-index .loginform.row img#logoimage {
+    position: relative;
+    z-index: 1;
+    width: min(240px, 80%);
+    max-height: 220px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+}
+
+#page-login-index .loginform .login-heading,
+#page-login-index .loginform .login-maintenance,
+#page-login-index .loginform .alert,
+#page-login-index .loginform .login-form,
+#page-login-index .loginform button[onclick="toggleNotification()"],
+#page-login-index .loginform #myNotice,
+#page-login-index .loginform .login-identityproviders {
+    grid-column: 2;
+    margin-left: 56px;
+    margin-right: 56px;
+}
+
+#page-login-index .loginform .login-heading {
+    margin-top: 56px;
+    margin-bottom: 24px;
+    color: #d50401;
+    font-weight: 700;
+    text-align: left;
+}
+
+#page-login-index .loginform .login-form {
+    margin-top: 56px;
+    margin-bottom: 0;
+}
+
+#page-login-index .loginform .form-control {
+    height: 48px;
+    border: 1px solid rgba(213, 4, 1, 0.22);
+    border-radius: 10px;
+    background-color: #fffaf3;
+    color: #2f1f1b;
+}
+
+#page-login-index .loginform .form-control:focus {
+    border-color: #d50401;
+    box-shadow: 0 0 0 0.2rem rgba(213, 4, 1, 0.14);
+}
+
+#page-login-index .loginform .btn-primary,
+#page-login-index .loginform #loginbtn {
+    height: 48px;
+    border: 1px solid #d50401 !important;
+    border-radius: 10px;
+    background: #d50401 !important;
+    color: #ffffff !important;
+    font-size: 17px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(213, 4, 1, 0.2);
+}
+
+#page-login-index .loginform .btn-primary:hover,
+#page-login-index .loginform #loginbtn:hover,
+#page-login-index .loginform .btn-primary:focus,
+#page-login-index .loginform #loginbtn:focus {
+    border-color: #b80401 !important;
+    background: #b80401 !important;
+}
+
+#page-login-index .loginform button[onclick="toggleNotification()"] {
+    color: #d50401 !important;
+    font-weight: 600;
+}
+
+#page-login-index .loginform #myNotice {
+    margin-bottom: 56px;
+    border-color: rgba(213, 4, 1, 0.2) !important;
+    background-color: #fff7eb !important;
+    color: #6d2520 !important;
+}
+
+#page-login-index .loginform.row > .right-column {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    #page-login-index .login-container {
+        padding: 16px !important;
+    }
+
+    #page-login-index .loginform.row > .left-column,
+    #page-login-index .loginform.row > .col {
+        display: block;
+    }
+
+    #page-login-index .loginform .login-logo {
+        min-height: 180px;
+        padding: 32px 24px;
+    }
+
+    #page-login-index .loginform .login-logo::after {
+        max-width: 240px;
+        margin-top: 16px;
+        font-size: 15px;
+    }
+
+    #page-login-index .loginform.row img#logoimage {
+        width: min(190px, 70%);
+    }
+
+    #page-login-index .loginform .login-heading,
+    #page-login-index .loginform .login-maintenance,
+    #page-login-index .loginform .alert,
+    #page-login-index .loginform .login-form,
+    #page-login-index .loginform button[onclick="toggleNotification()"],
+    #page-login-index .loginform #myNotice,
+    #page-login-index .loginform .login-identityproviders {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    #page-login-index .loginform .login-form {
+        margin-top: 32px;
+    }
+}
+
+/* Login page fallback selectors using Moodle layout class */
+body.pagelayout-login,
+body.pagelayout-login #page,
+body.pagelayout-login #page-wrapper {
+    background-color: transparent !important;
+}
+
+body.pagelayout-login {
+    min-height: 100vh;
+}
+
+body.pagelayout-login::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(250, 242, 228, 0.76), rgba(250, 242, 228, 0.86)),
+        var(--moove-login-bg-image, none);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    transform: scale(1.02);
+    opacity: 0.5;
+}
+
+body.pagelayout-login #page-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+body.pagelayout-login .login-container {
+    width: 100% !important;
+    max-width: 1040px !important;
+    padding: 24px !important;
+    margin: 0 auto;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body.pagelayout-login .loginform.row {
+    display: block;
+    width: 100% !important;
+    max-width: 960px;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(213, 4, 1, 0.16);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(78, 42, 25, 0.14);
+}
+
+body.pagelayout-login .loginform.row > .left-column,
+body.pagelayout-login .loginform.row > .col {
+    display: grid;
+    grid-template-columns: minmax(260px, 42%) minmax(320px, 1fr);
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 0 !important;
+}
+
+body.pagelayout-login .loginform .login-logo {
+    grid-row: 1 / span 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 430px;
+    margin: 0;
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-image:
+        linear-gradient(rgba(213, 4, 1, 0.82), rgba(160, 2, 0, 0.88)),
+        var(--moove-login-bg-image, none);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.pagelayout-login .loginform .login-logo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(213, 4, 1, 0.16);
+    backdrop-filter: blur(1.5px);
+}
+
+body.pagelayout-login .loginform .login-logo::after {
+    content: "HE THONG DAO TAO TRUC TUYEN";
+    position: relative;
+    z-index: 1;
+    display: block;
+    max-width: 280px;
+    margin-top: 22px;
+    color: #fff7ed;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+}
+
+body.pagelayout-login .loginform.row img#logoimage {
+    position: relative;
+    z-index: 1;
+    width: min(240px, 80%);
+    max-height: 220px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+}
+
+body.pagelayout-login .loginform .login-heading,
+body.pagelayout-login .loginform .login-maintenance,
+body.pagelayout-login .loginform .alert,
+body.pagelayout-login .loginform .login-form,
+body.pagelayout-login .loginform button[onclick="toggleNotification()"],
+body.pagelayout-login .loginform #myNotice,
+body.pagelayout-login .loginform .login-identityproviders {
+    grid-column: 2;
+    margin-left: 56px;
+    margin-right: 56px;
+}
+
+body.pagelayout-login .loginform .login-form {
+    margin-top: 56px;
+    margin-bottom: 0;
+}
+
+body.pagelayout-login .loginform .form-control {
+    height: 48px;
+    border: 1px solid rgba(213, 4, 1, 0.22);
+    border-radius: 10px;
+    background-color: #fffaf3;
+    color: #2f1f1b;
+}
+
+body.pagelayout-login .loginform .form-control:focus {
+    border-color: #d50401;
+    box-shadow: 0 0 0 0.2rem rgba(213, 4, 1, 0.14);
+}
+
+body.pagelayout-login .loginform .btn-primary,
+body.pagelayout-login .loginform #loginbtn {
+    height: 48px;
+    border: 1px solid #d50401 !important;
+    border-radius: 10px;
+    background: #d50401 !important;
+    color: #ffffff !important;
+    font-size: 17px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(213, 4, 1, 0.2);
+}
+
+body.pagelayout-login .loginform.row > .right-column {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    body.pagelayout-login .login-container {
+        padding: 16px !important;
+    }
+
+    body.pagelayout-login .loginform.row > .left-column,
+    body.pagelayout-login .loginform.row > .col {
+        display: block;
+    }
+
+    body.pagelayout-login .loginform .login-logo {
+        min-height: 180px;
+        padding: 32px 24px;
+    }
+
+    body.pagelayout-login .loginform .login-logo::after {
+        max-width: 240px;
+        margin-top: 16px;
+        font-size: 15px;
+    }
+
+    body.pagelayout-login .loginform .login-heading,
+    body.pagelayout-login .loginform .login-maintenance,
+    body.pagelayout-login .loginform .alert,
+    body.pagelayout-login .loginform .login-form,
+    body.pagelayout-login .loginform button[onclick="toggleNotification()"],
+    body.pagelayout-login .loginform #myNotice,
+    body.pagelayout-login .loginform .login-identityproviders {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    body.pagelayout-login .loginform .login-form {
+        margin-top: 32px;
+    }
+}
+
+/* Full login background and soft overlay */
+
+
+
+
+@media (max-width: 767px) {
+    body.pagelayout-login .login-wrapper {
+        padding: 16px;
+    }
+}

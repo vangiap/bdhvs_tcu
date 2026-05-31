@@ -72,20 +72,29 @@ function theme_moove_get_extra_scss($theme) {
 
     // Sets the login background image.
     $loginbgimgurl = $theme->setting_file_url('loginbgimg', 'loginbgimg');
+    $loginlogobgurl = $theme->setting_file_url('loginlogobg', 'loginlogobg');
 
-    if (empty($loginbgimgurl)) {
-        return '';
+    if (!empty($loginbgimgurl)) {
+        $content .= 'body.pagelayout-login { ';
+        $content .= "--moove-login-bg-image: url('$loginbgimgurl');";
+        $content .= ' }';
+        $content .= 'body.pagelayout-login #page { ';
+        $content .= 'background-color: initial; background-image: var(--moove-login-bg-image); background-size: cover;';
+        $content .= ' }';
+        $content .= 'body.pagelayout-login .login-wrapper { ';
+        $content .= 'background-image: var(--moove-login-bg-image); background-position: center; background-size: cover; background-repeat: no-repeat;';
+        $content .= ' }';
     }
 
-    $content .= 'body.pagelayout-login { ';
-    $content .= "--moove-login-bg-image: url('$loginbgimgurl');";
-    $content .= ' }';
-    $content .= 'body.pagelayout-login #page { ';
-    $content .= 'background-color: initial; background-image: var(--moove-login-bg-image); background-size: cover;';
-    $content .= ' }';
-    $content .= 'body.pagelayout-login .login-wrapper { ';
-    $content .= 'background-image: var(--moove-login-bg-image); background-position: center; background-size: cover; background-repeat: no-repeat;';
-    $content .= ' }';
+    if (!empty($loginlogobgurl)) {
+        $content .= 'body.pagelayout-login { ';
+        $content .= "--moove-login-logo-bg-image: url('$loginlogobgurl');";
+        $content .= ' }';
+        $content .= 'body.pagelayout-login .loginform .login-logo { ';
+        $content .= 'background-image: linear-gradient(rgba(213, 4, 1, 0.82), rgba(160, 2, 0, 0.88)), var(--moove-login-logo-bg-image);';
+        $content .= 'background-position: center; background-size: cover; background-repeat: no-repeat;';
+        $content .= ' }';
+    }
 
     // Always return the background image with the scss when we have it.
     return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
@@ -161,7 +170,8 @@ function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $force
     $theme = theme_config::load('moove');
 
     if ($context->contextlevel == CONTEXT_SYSTEM &&
-        ($filearea === 'logo' || $filearea === 'loginbgimg' || $filearea == 'favicon')) {
+        ($filearea === 'logo' || $filearea === 'loginbgimg' || $filearea === 'loginlogo' ||
+        $filearea === 'loginlogobg' || $filearea == 'favicon')) {
         $theme = theme_config::load('moove');
         // By default, theme files must be cache-able by both browsers and proxies.
         if (!array_key_exists('cacheability', $options)) {

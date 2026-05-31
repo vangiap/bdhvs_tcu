@@ -95,6 +95,32 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Login logo file setting.
+    $name = 'theme_moove/loginlogo';
+    $title = get_string('loginlogo', 'theme_moove');
+    $description = get_string('loginlogo_desc', 'theme_moove');
+    $opts = ['accepted_types' => ['.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'], 'maxfiles' => 1];
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginlogo', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Login logo column background image.
+    $name = 'theme_moove/loginlogobg';
+    $title = get_string('loginlogobg', 'theme_moove');
+    $description = get_string('loginlogobg_desc', 'theme_moove');
+    $opts = ['accepted_types' => ['.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'], 'maxfiles' => 1];
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginlogobg', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Login logo text.
+    $name = 'theme_moove/loginlogotext';
+    $title = get_string('loginlogotext', 'theme_moove');
+    $description = get_string('loginlogotext_desc', 'theme_moove');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_TEXT);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_moove/brandcolor';
@@ -536,4 +562,3 @@ if ($ADMIN->fulltree) {
 
     $settings->add($page);
 }
-

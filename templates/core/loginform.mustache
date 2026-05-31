@@ -104,6 +104,9 @@
         {{#logourl}}
             <div id="loginlogo" class="login-logo">
                 <img id="logoimage" src="{{logourl}}" class="img-fluid" alt="{{sitename}}"/>
+                {{#hasloginlogotext}}
+                    <div class="login-logo-text">{{loginlogotext}}</div>
+                {{/hasloginlogotext}}
                 <h1 class="login-heading visually-hidden">{{#str}} loginto, core, {{sitename}} {{/str}}</h1>
             </div>
         {{/logourl}}

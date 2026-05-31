@@ -831,7 +831,7 @@ body#page-login-index::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
     background:
         linear-gradient(rgba(0, 0, 0, 0.76), rgba(250, 242, 228, 0.86)),
@@ -847,6 +847,7 @@ body#page-login-index::before {
 }
 
 #page-login-index .login-container {
+    z-index: 2;
     width: 100% !important;
     max-width: 1040px !important;
     padding: 24px !important;
@@ -892,7 +893,8 @@ body#page-login-index::before {
     overflow: hidden;
     text-align: center;
     background:
-        linear-gradient(rgb(255 199 96 / 0%), rgb(211 183 183 / 42%)), url("//localhost/moodle/pluginfile.php/1/theme_moove/sliderimage1/1779845759/BG01.jpg") center / cover no-repeat;
+        linear-gradient(rgb(255 199 96 / 0%), rgb(211 183 183 / 42%)),
+        var(--moove-login-logo-bg-image, var(--moove-login-bg-image, none)) center / cover no-repeat;
 }
 
 #page-login-index .loginform .login-logo::before {
@@ -904,7 +906,11 @@ body#page-login-index::before {
 }
 
 #page-login-index .loginform .login-logo::after {
-    content: "BÌNH DÂN HỌC VỤ SỐ 2026";
+    content: none;
+    display: none;
+}
+
+#page-login-index .loginform .login-logo-text {
     position: relative;
     z-index: 1;
     display: block;
@@ -1016,7 +1022,7 @@ body#page-login-index::before {
         padding: 32px 24px;
     }
 
-    #page-login-index .loginform .login-logo::after {
+    #page-login-index .loginform .login-logo-text {
         max-width: 240px;
         margin-top: 16px;
         font-size: 15px;
@@ -1048,7 +1054,14 @@ body.pagelayout-login #page,
 body.pagelayout-login #page-wrapper {
     background-color: transparent !important;
 }
-
+body.pagelayout-login .login-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: rgba(250, 242, 228, 0.55);
+}
 body.pagelayout-login {
     min-height: 100vh;
 }
@@ -1060,14 +1073,14 @@ body.pagelayout-login::before {
     z-index: 0;
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(250, 242, 228, 0.76), rgba(250, 242, 228, 0.86)),
-        var(--moove-login-bg-image, none);
+        linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.86)),
+        var(--moove-login-logo-bg-image, var(--moove-login-bg-image, none));
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     filter: blur(3px);
     transform: scale(1.02);
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 body.pagelayout-login #page-wrapper {
@@ -1136,7 +1149,11 @@ body.pagelayout-login .loginform .login-logo::before {
 }
 
 body.pagelayout-login .loginform .login-logo::after {
-    content: "HE THONG DAO TAO TRUC TUYEN";
+    content: none;
+    display: none;
+}
+
+body.pagelayout-login .loginform .login-logo-text {
     position: relative;
     z-index: 1;
     display: block;
@@ -1220,7 +1237,7 @@ body.pagelayout-login .loginform.row > .right-column {
         padding: 32px 24px;
     }
 
-    body.pagelayout-login .loginform .login-logo::after {
+    body.pagelayout-login .loginform .login-logo-text {
         max-width: 240px;
         margin-top: 16px;
         font-size: 15px;
@@ -1242,9 +1259,21 @@ body.pagelayout-login .loginform.row > .right-column {
     }
 }
 
-/* Full login background and soft overlay */
 
+/* Điều chỉnh chiều ngang background login */
 
+body.pagelayout-login,
+body.pagelayout-login #page-wrapper,
+body.pagelayout-login #page {
+    min-height: 100vh;
+}
+
+body.pagelayout-login #page {
+    padding: 0 !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 @media (max-width: 767px) {

@@ -242,9 +242,15 @@ public function get_theme_footerbg_url() {
         global $SITE, $CFG;
 
         $context = $form->export_for_template($this);
+        $theme = theme_config::load('moove');
+        $loginlogo = $theme->setting_file_url('loginlogo', 'loginlogo');
+        $loginlogotext = !empty($theme->settings->loginlogotext) ? $theme->settings->loginlogotext : '';
 
         $context->errorformatted = $this->error_text($context->error);
-        $context->logourl = $this->get_logo();
+        $context->logourl = $loginlogo ?: $this->get_logo();
+        $context->loginlogotext = format_string($loginlogotext, true,
+            ['context' => \context_system::instance(), "escape" => false]);
+        $context->hasloginlogotext = !empty($loginlogotext);
         $context->sitename = format_string($SITE->fullname, true,
             ['context' => context_course::instance(SITEID), "escape" => false]);
 
@@ -596,6 +602,4 @@ public function get_theme_footerbg_url() {
         return parent::render_from_template($templatename, $context);
     }
 }
-
-
 

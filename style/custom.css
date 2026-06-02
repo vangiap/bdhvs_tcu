@@ -823,16 +823,49 @@ footer .contact ul li i.fa {
     background-color: rgba(0, 0, 0, 0.125);
     height: 100%;
 }
+/* Login page */
+body.pagelayout-login,
+body.pagelayout-login #page,
+body.pagelayout-login #page-wrapper {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: transparent !important;
+}
 
-/* Login page custom theme */
+body.pagelayout-login #page {
+    padding: 0 !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+body.pagelayout-login #page-wrapper,
+#page-login-index #page-wrapper {
+    position: relative;
+    z-index: 1;
+}
 
-body#page-login-index::before {
+body.pagelayout-login::before,
+body#page-login-index::before,
+body.pagelayout-login .login-wrapper::after {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: 1;
     pointer-events: none;
+}
+
+body.pagelayout-login::before {
+    z-index: 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.86)),
+        var(--moove-login-logo-bg-image, var(--moove-login-bg-image, none)) center / cover no-repeat;
+    filter: blur(3px);
+    transform: scale(1.02);
+    opacity: 0.3;
+}
+
+body#page-login-index::before {
+    z-index: 1;
     background:
         linear-gradient(rgba(0, 0, 0, 0.76), rgba(250, 242, 228, 0.86)),
         url("../pix/banner-header.jpg") center / cover no-repeat;
@@ -841,25 +874,36 @@ body#page-login-index::before {
     opacity: 0.5;
 }
 
-#page-login-index #page-wrapper {
-    position: relative;
-    z-index: 1;
+body.pagelayout-login .login-wrapper::after {
+    position: absolute;
+    z-index: 0;
+    background: rgba(250, 242, 228, 0.55);
 }
 
+body.pagelayout-login .login-wrapper,
+body.pagelayout-login .login-container,
+body.pagelayout-login .loginform.row,
+#page-login-index .login-container,
+#page-login-index .loginform.row {
+    box-sizing: border-box;
+}
+
+body.pagelayout-login .login-container,
 #page-login-index .login-container {
     z-index: 2;
     width: 100% !important;
-    max-width: 1040px !important;
+    max-width: min(1040px, calc(100vw - 32px)) !important;
     padding: 24px !important;
     margin: 0 auto;
     background: transparent !important;
     box-shadow: none !important;
 }
 
+body.pagelayout-login .loginform.row,
 #page-login-index .loginform.row {
     display: block;
     width: 100% !important;
-    max-width: 960px;
+    max-width: min(960px, calc(100vw - 32px)) !important;
     margin: 0 auto !important;
     padding: 0 !important;
     overflow: hidden;
@@ -869,19 +913,26 @@ body#page-login-index::before {
     box-shadow: 0 18px 45px rgba(78, 42, 25, 0.14);
 }
 
+body.pagelayout-login .loginform.row > .left-column,
+body.pagelayout-login .loginform.row > .col,
 #page-login-index .loginform.row > .left-column,
 #page-login-index .loginform.row > .col {
     display: grid;
     grid-template-columns: minmax(260px, 42%) minmax(320px, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto auto auto auto minmax(64px, auto) minmax(0, 1fr);
     gap: 0;
+    align-items: stretch;
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0;
+    min-height: 430px;
     flex: 0 0 100% !important;
     padding: 0 !important;
 }
 
+body.pagelayout-login .loginform .login-logo,
 #page-login-index .loginform .login-logo {
-    grid-row: 1 / span 10;
+    grid-row: 1 / -1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -893,10 +944,17 @@ body#page-login-index::before {
     overflow: hidden;
     text-align: center;
     background:
+        linear-gradient(rgba(213, 4, 1, 0.82), rgba(160, 2, 0, 0.88)),
+        var(--moove-login-bg-image, none) center / cover no-repeat;
+}
+
+#page-login-index .loginform .login-logo {
+    background:
         linear-gradient(rgb(255 199 96 / 0%), rgb(211 183 183 / 42%)),
         var(--moove-login-logo-bg-image, var(--moove-login-bg-image, none)) center / cover no-repeat;
 }
 
+body.pagelayout-login .loginform .login-logo::before,
 #page-login-index .loginform .login-logo::before {
     content: "";
     position: absolute;
@@ -905,11 +963,13 @@ body#page-login-index::before {
     backdrop-filter: blur(1.5px);
 }
 
+body.pagelayout-login .loginform .login-logo::after,
 #page-login-index .loginform .login-logo::after {
     content: none;
     display: none;
 }
 
+body.pagelayout-login .loginform .login-logo-text,
 #page-login-index .loginform .login-logo-text {
     position: relative;
     z-index: 1;
@@ -924,6 +984,7 @@ body#page-login-index::before {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
 }
 
+body.pagelayout-login .loginform.row img#logoimage,
 #page-login-index .loginform.row img#logoimage {
     position: relative;
     z-index: 1;
@@ -933,6 +994,13 @@ body#page-login-index::before {
     filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
 }
 
+body.pagelayout-login .loginform .login-heading,
+body.pagelayout-login .loginform .login-maintenance,
+body.pagelayout-login .loginform .alert,
+body.pagelayout-login .loginform .login-form,
+body.pagelayout-login .loginform button[onclick="toggleNotification()"],
+body.pagelayout-login .loginform #myNotice,
+body.pagelayout-login .loginform .login-identityproviders,
 #page-login-index .loginform .login-heading,
 #page-login-index .loginform .login-maintenance,
 #page-login-index .loginform .alert,
@@ -945,7 +1013,9 @@ body#page-login-index::before {
     margin-right: 56px;
 }
 
+body.pagelayout-login .loginform .login-heading,
 #page-login-index .loginform .login-heading {
+    grid-row: 2;
     margin-top: 56px;
     margin-bottom: 24px;
     color: #d50401;
@@ -953,11 +1023,38 @@ body#page-login-index::before {
     text-align: left;
 }
 
+body.pagelayout-login .loginform .login-form,
 #page-login-index .loginform .login-form {
-    margin-top: 56px;
+    grid-row: 3;
+    margin-top: 0 !important;
     margin-bottom: 0;
 }
 
+body.pagelayout-login .loginform button[onclick="toggleNotification()"],
+#page-login-index .loginform button[onclick="toggleNotification()"] {
+    grid-row: 4;
+    color: #d50401 !important;
+    font-weight: 600;
+}
+
+body.pagelayout-login .loginform #myNotice,
+#page-login-index .loginform #myNotice {
+    grid-row: 5;
+    margin-bottom: 56px;
+    border-color: rgba(213, 4, 1, 0.2) !important;
+    background-color: #fff7eb !important;
+    color: #6d2520 !important;
+}
+
+body.pagelayout-login .loginform .alert.alert-danger:not(.login-maintenance),
+#page-login-index .loginform .alert.alert-danger:not(.login-maintenance) {
+    grid-row: 6;
+    min-height: 48px;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+body.pagelayout-login .loginform .form-control,
 #page-login-index .loginform .form-control {
     height: 48px;
     border: 1px solid rgba(213, 4, 1, 0.22);
@@ -966,11 +1063,14 @@ body#page-login-index::before {
     color: #2f1f1b;
 }
 
+body.pagelayout-login .loginform .form-control:focus,
 #page-login-index .loginform .form-control:focus {
     border-color: #d50401;
     box-shadow: 0 0 0 0.2rem rgba(213, 4, 1, 0.14);
 }
 
+body.pagelayout-login .loginform .btn-primary,
+body.pagelayout-login .loginform #loginbtn,
 #page-login-index .loginform .btn-primary,
 #page-login-index .loginform #loginbtn {
     height: 48px;
@@ -991,47 +1091,57 @@ body#page-login-index::before {
     background: #b80401 !important;
 }
 
-#page-login-index .loginform button[onclick="toggleNotification()"] {
-    color: #d50401 !important;
-    font-weight: 600;
-}
-
-#page-login-index .loginform #myNotice {
-    margin-bottom: 56px;
-    border-color: rgba(213, 4, 1, 0.2) !important;
-    background-color: #fff7eb !important;
-    color: #6d2520 !important;
-}
-
+body.pagelayout-login .loginform.row > .right-column,
 #page-login-index .loginform.row > .right-column {
     display: none !important;
 }
 
 @media (max-width: 767px) {
+    body.pagelayout-login .login-wrapper {
+        padding: 16px;
+    }
+
+    body.pagelayout-login .login-container,
     #page-login-index .login-container {
         padding: 16px !important;
     }
 
+    body.pagelayout-login .loginform.row > .left-column,
+    body.pagelayout-login .loginform.row > .col,
     #page-login-index .loginform.row > .left-column,
     #page-login-index .loginform.row > .col {
-        display: block;
+        display: flex !important;
+        flex-direction: column;
+        min-height: 0;
     }
 
+    body.pagelayout-login .loginform .login-logo,
     #page-login-index .loginform .login-logo {
+        order: 1;
+        width: 100%;
         min-height: 180px;
         padding: 32px 24px;
     }
 
+    body.pagelayout-login .loginform .login-logo-text,
     #page-login-index .loginform .login-logo-text {
         max-width: 240px;
         margin-top: 16px;
         font-size: 15px;
     }
 
+    body.pagelayout-login .loginform.row img#logoimage,
     #page-login-index .loginform.row img#logoimage {
         width: min(190px, 70%);
     }
 
+    body.pagelayout-login .loginform .login-heading,
+    body.pagelayout-login .loginform .login-maintenance,
+    body.pagelayout-login .loginform .alert,
+    body.pagelayout-login .loginform .login-form,
+    body.pagelayout-login .loginform button[onclick="toggleNotification()"],
+    body.pagelayout-login .loginform #myNotice,
+    body.pagelayout-login .loginform .login-identityproviders,
     #page-login-index .loginform .login-heading,
     #page-login-index .loginform .login-maintenance,
     #page-login-index .loginform .alert,
@@ -1043,241 +1153,28 @@ body#page-login-index::before {
         margin-right: 24px;
     }
 
-    #page-login-index .loginform .login-form {
-        margin-top: 32px;
-    }
-}
-
-/* Login page fallback selectors using Moodle layout class */
-body.pagelayout-login,
-body.pagelayout-login #page,
-body.pagelayout-login #page-wrapper {
-    background-color: transparent !important;
-}
-body.pagelayout-login .login-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background: rgba(250, 242, 228, 0.55);
-}
-body.pagelayout-login {
-    min-height: 100vh;
-}
-
-body.pagelayout-login::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.86)),
-        var(--moove-login-logo-bg-image, var(--moove-login-bg-image, none));
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(3px);
-    transform: scale(1.02);
-    opacity: 0.3;
-}
-
-body.pagelayout-login #page-wrapper {
-    position: relative;
-    z-index: 1;
-}
-
-body.pagelayout-login .login-container {
-    width: 100% !important;
-    max-width: 1040px !important;
-    padding: 24px !important;
-    margin: 0 auto;
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-body.pagelayout-login .loginform.row {
-    display: block;
-    width: 100% !important;
-    max-width: 960px;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    overflow: hidden;
-    background: #ffffff;
-    border: 1px solid rgba(213, 4, 1, 0.16);
-    border-radius: 18px;
-    box-shadow: 0 18px 45px rgba(78, 42, 25, 0.14);
-}
-
-body.pagelayout-login .loginform.row > .left-column,
-body.pagelayout-login .loginform.row > .col {
-    display: grid;
-    grid-template-columns: minmax(260px, 42%) minmax(320px, 1fr);
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
-    padding: 0 !important;
-}
-
-body.pagelayout-login .loginform .login-logo {
-    grid-row: 1 / span 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 430px;
-    margin: 0;
-    padding: 48px 36px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background-image:
-        linear-gradient(rgba(213, 4, 1, 0.82), rgba(160, 2, 0, 0.88)),
-        var(--moove-login-bg-image, none);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-body.pagelayout-login .loginform .login-logo::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(213, 4, 1, 0.16);
-    backdrop-filter: blur(1.5px);
-}
-
-body.pagelayout-login .loginform .login-logo::after {
-    content: none;
-    display: none;
-}
-
-body.pagelayout-login .loginform .login-logo-text {
-    position: relative;
-    z-index: 1;
-    display: block;
-    max-width: 280px;
-    margin-top: 22px;
-    color: #fff7ed;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.35;
-    letter-spacing: 0.04em;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
-}
-
-body.pagelayout-login .loginform.row img#logoimage {
-    position: relative;
-    z-index: 1;
-    width: min(240px, 80%);
-    max-height: 220px;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
-}
-
-body.pagelayout-login .loginform .login-heading,
-body.pagelayout-login .loginform .login-maintenance,
-body.pagelayout-login .loginform .alert,
-body.pagelayout-login .loginform .login-form,
-body.pagelayout-login .loginform button[onclick="toggleNotification()"],
-body.pagelayout-login .loginform #myNotice,
-body.pagelayout-login .loginform .login-identityproviders {
-    grid-column: 2;
-    margin-left: 56px;
-    margin-right: 56px;
-}
-
-body.pagelayout-login .loginform .login-form {
-    margin-top: 56px;
-    margin-bottom: 0;
-}
-
-body.pagelayout-login .loginform .form-control {
-    height: 48px;
-    border: 1px solid rgba(213, 4, 1, 0.22);
-    border-radius: 10px;
-    background-color: #fffaf3;
-    color: #2f1f1b;
-}
-
-body.pagelayout-login .loginform .form-control:focus {
-    border-color: #d50401;
-    box-shadow: 0 0 0 0.2rem rgba(213, 4, 1, 0.14);
-}
-
-body.pagelayout-login .loginform .btn-primary,
-body.pagelayout-login .loginform #loginbtn {
-    height: 48px;
-    border: 1px solid #d50401 !important;
-    border-radius: 10px;
-    background: #d50401 !important;
-    color: #ffffff !important;
-    font-size: 17px;
-    font-weight: 700;
-    box-shadow: 0 10px 20px rgba(213, 4, 1, 0.2);
-}
-
-body.pagelayout-login .loginform.row > .right-column {
-    display: none !important;
-}
-
-@media (max-width: 767px) {
-    body.pagelayout-login .login-container {
-        padding: 16px !important;
-    }
-
-    body.pagelayout-login .loginform.row > .left-column,
-    body.pagelayout-login .loginform.row > .col {
-        display: block;
-    }
-
-    body.pagelayout-login .loginform .login-logo {
-        min-height: 180px;
-        padding: 32px 24px;
-    }
-
-    body.pagelayout-login .loginform .login-logo-text {
-        max-width: 240px;
-        margin-top: 16px;
-        font-size: 15px;
-    }
-
     body.pagelayout-login .loginform .login-heading,
-    body.pagelayout-login .loginform .login-maintenance,
-    body.pagelayout-login .loginform .alert,
+    #page-login-index .loginform .login-heading {
+        order: 2;
+    }
+
     body.pagelayout-login .loginform .login-form,
+    #page-login-index .loginform .login-form {
+        order: 3;
+    }
+
+    body.pagelayout-login .loginform .alert.alert-danger:not(.login-maintenance),
+    #page-login-index .loginform .alert.alert-danger:not(.login-maintenance) {
+        order: 4;
+    }
+
     body.pagelayout-login .loginform button[onclick="toggleNotification()"],
+    #page-login-index .loginform button[onclick="toggleNotification()"] {
+        order: 5;
+    }
+
     body.pagelayout-login .loginform #myNotice,
-    body.pagelayout-login .loginform .login-identityproviders {
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-
-    body.pagelayout-login .loginform .login-form {
-        margin-top: 32px;
-    }
-}
-
-
-/* Điều chỉnh chiều ngang background login */
-
-body.pagelayout-login,
-body.pagelayout-login #page-wrapper,
-body.pagelayout-login #page {
-    min-height: 100vh;
-}
-
-body.pagelayout-login #page {
-    padding: 0 !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-@media (max-width: 767px) {
-    body.pagelayout-login .login-wrapper {
-        padding: 16px;
+    #page-login-index .loginform #myNotice {
+        order: 6;
     }
 }
